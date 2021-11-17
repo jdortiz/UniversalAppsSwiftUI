@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9C9B92D2744FE12007A0705 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B92C2744FE12007A0705 /* Tests_iOS.swift */; };
+		C9C9B92F2744FE12007A0705 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B92E2744FE12007A0705 /* Tests_iOSLaunchTests.swift */; };
+		C9C9B9392744FE12007A0705 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9382744FE12007A0705 /* Tests_macOS.swift */; };
+		C9C9B93B2744FE12007A0705 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */; };
+		C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */; };
+		C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */; };
+		C9C9B93E2744FE12007A0705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ContentView.swift */; };
+		C9C9B93F2744FE12007A0705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ContentView.swift */; };
+		C9C9B9402744FE12007A0705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C9B9162744FE11007A0705 /* Assets.xcassets */; };
+		C9C9B9412744FE12007A0705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C9B9162744FE11007A0705 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9C9B9292744FE12007A0705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C9B90F2744FE0F007A0705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C9B91A2744FE12007A0705;
+			remoteInfo = "MindLikeWater (iOS)";
+		};
+		C9C9B9352744FE12007A0705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C9B90F2744FE0F007A0705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C9B9202744FE12007A0705;
+			remoteInfo = "MindLikeWater (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindLikeWaterApp.swift; sourceTree = "<group>"; };
+		C9C9B9152744FE10007A0705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9C9B9162744FE11007A0705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9C9B91B2744FE12007A0705 /* MindLikeWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindLikeWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C9B9212744FE12007A0705 /* MindLikeWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindLikeWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C9B9232744FE12007A0705 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C9C9B9282744FE12007A0705 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C9B92C2744FE12007A0705 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		C9C9B92E2744FE12007A0705 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		C9C9B9342744FE12007A0705 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C9B9382744FE12007A0705 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9C9B9182744FE12007A0705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B91E2744FE12007A0705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9252744FE12007A0705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9312744FE12007A0705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9C9B90E2744FE0F007A0705 = {
+			isa = PBXGroup;
+			children = (
+				C9C9B9132744FE10007A0705 /* Shared */,
+				C9C9B9222744FE12007A0705 /* macOS */,
+				C9C9B92B2744FE12007A0705 /* Tests iOS */,
+				C9C9B9372744FE12007A0705 /* Tests macOS */,
+				C9C9B91C2744FE12007A0705 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9C9B9132744FE10007A0705 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */,
+				C9C9B9152744FE10007A0705 /* ContentView.swift */,
+				C9C9B9162744FE11007A0705 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C9C9B91C2744FE12007A0705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9B91B2744FE12007A0705 /* MindLikeWater.app */,
+				C9C9B9212744FE12007A0705 /* MindLikeWater.app */,
+				C9C9B9282744FE12007A0705 /* Tests iOS.xctest */,
+				C9C9B9342744FE12007A0705 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C9B9222744FE12007A0705 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9B9232744FE12007A0705 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		C9C9B92B2744FE12007A0705 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9B92C2744FE12007A0705 /* Tests_iOS.swift */,
+				C9C9B92E2744FE12007A0705 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		C9C9B9372744FE12007A0705 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9B9382744FE12007A0705 /* Tests_macOS.swift */,
+				C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9C9B91A2744FE12007A0705 /* MindLikeWater (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C9B9442744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (iOS)" */;
+			buildPhases = (
+				C9C9B9172744FE12007A0705 /* Sources */,
+				C9C9B9182744FE12007A0705 /* Frameworks */,
+				C9C9B9192744FE12007A0705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MindLikeWater (iOS)";
+			productName = "MindLikeWater (iOS)";
+			productReference = C9C9B91B2744FE12007A0705 /* MindLikeWater.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C9B9202744FE12007A0705 /* MindLikeWater (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C9B9472744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (macOS)" */;
+			buildPhases = (
+				C9C9B91D2744FE12007A0705 /* Sources */,
+				C9C9B91E2744FE12007A0705 /* Frameworks */,
+				C9C9B91F2744FE12007A0705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MindLikeWater (macOS)";
+			productName = "MindLikeWater (macOS)";
+			productReference = C9C9B9212744FE12007A0705 /* MindLikeWater.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C9B9272744FE12007A0705 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C9B94A2744FE12007A0705 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				C9C9B9242744FE12007A0705 /* Sources */,
+				C9C9B9252744FE12007A0705 /* Frameworks */,
+				C9C9B9262744FE12007A0705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C9B92A2744FE12007A0705 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = C9C9B9282744FE12007A0705 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C9C9B9332744FE12007A0705 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C9B94D2744FE12007A0705 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				C9C9B9302744FE12007A0705 /* Sources */,
+				C9C9B9312744FE12007A0705 /* Frameworks */,
+				C9C9B9322744FE12007A0705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C9B9362744FE12007A0705 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = C9C9B9342744FE12007A0705 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C9B90F2744FE0F007A0705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					C9C9B91A2744FE12007A0705 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					C9C9B9202744FE12007A0705 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					C9C9B9272744FE12007A0705 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = C9C9B91A2744FE12007A0705;
+					};
+					C9C9B9332744FE12007A0705 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = C9C9B9202744FE12007A0705;
+					};
+				};
+			};
+			buildConfigurationList = C9C9B9122744FE0F007A0705 /* Build configuration list for PBXProject "MindLikeWater" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9C9B90E2744FE0F007A0705;
+			productRefGroup = C9C9B91C2744FE12007A0705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9C9B91A2744FE12007A0705 /* MindLikeWater (iOS) */,
+				C9C9B9202744FE12007A0705 /* MindLikeWater (macOS) */,
+				C9C9B9272744FE12007A0705 /* Tests iOS */,
+				C9C9B9332744FE12007A0705 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9C9B9192744FE12007A0705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B9402744FE12007A0705 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B91F2744FE12007A0705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B9412744FE12007A0705 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9262744FE12007A0705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9322744FE12007A0705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9C9B9172744FE12007A0705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B93E2744FE12007A0705 /* ContentView.swift in Sources */,
+				C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B91D2744FE12007A0705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B93F2744FE12007A0705 /* ContentView.swift in Sources */,
+				C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9242744FE12007A0705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B92F2744FE12007A0705 /* Tests_iOSLaunchTests.swift in Sources */,
+				C9C9B92D2744FE12007A0705 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C9B9302744FE12007A0705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C9B93B2744FE12007A0705 /* Tests_macOSLaunchTests.swift in Sources */,
+				C9C9B9392744FE12007A0705 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9C9B92A2744FE12007A0705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C9B91A2744FE12007A0705 /* MindLikeWater (iOS) */;
+			targetProxy = C9C9B9292744FE12007A0705 /* PBXContainerItemProxy */;
+		};
+		C9C9B9362744FE12007A0705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C9B9202744FE12007A0705 /* MindLikeWater (macOS) */;
+			targetProxy = C9C9B9352744FE12007A0705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9C9B9422744FE12007A0705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9C9B9432744FE12007A0705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C9C9B9452744FE12007A0705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.MindLikeWater;
+				PRODUCT_NAME = MindLikeWater;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9C9B9462744FE12007A0705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.MindLikeWater;
+				PRODUCT_NAME = MindLikeWater;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C9B9482744FE12007A0705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.MindLikeWater;
+				PRODUCT_NAME = MindLikeWater;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C9C9B9492744FE12007A0705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.MindLikeWater;
+				PRODUCT_NAME = MindLikeWater;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C9C9B94B2744FE12007A0705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mongodb.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MindLikeWater (iOS)";
+			};
+			name = Debug;
+		};
+		C9C9B94C2744FE12007A0705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mongodb.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MindLikeWater (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C9B94E2744FE12007A0705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mongodb.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MindLikeWater (macOS)";
+			};
+			name = Debug;
+		};
+		C9C9B94F2744FE12007A0705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 324YCFLY7B;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mongodb.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MindLikeWater (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9C9B9122744FE0F007A0705 /* Build configuration list for PBXProject "MindLikeWater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C9B9422744FE12007A0705 /* Debug */,
+				C9C9B9432744FE12007A0705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C9B9442744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C9B9452744FE12007A0705 /* Debug */,
+				C9C9B9462744FE12007A0705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C9B9472744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C9B9482744FE12007A0705 /* Debug */,
+				C9C9B9492744FE12007A0705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C9B94A2744FE12007A0705 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C9B94B2744FE12007A0705 /* Debug */,
+				C9C9B94C2744FE12007A0705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C9B94D2744FE12007A0705 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C9B94E2744FE12007A0705 /* Debug */,
+				C9C9B94F2744FE12007A0705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C9B90F2744FE0F007A0705 /* Project object */;
+}
