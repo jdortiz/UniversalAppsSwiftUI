@@ -49,6 +49,8 @@
 		C9C9B9342744FE12007A0705 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C9B9382744FE12007A0705 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		C9C9B95027450090007A0705 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C9C9B95127450090007A0705 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,8 @@
 		C9C9B90E2744FE0F007A0705 = {
 			isa = PBXGroup;
 			children = (
+				C9C9B95027450090007A0705 /* LICENSE.txt */,
+				C9C9B95127450090007A0705 /* README.md */,
 				C9C9B9132744FE10007A0705 /* Shared */,
 				C9C9B9222744FE12007A0705 /* macOS */,
 				C9C9B92B2744FE12007A0705 /* Tests iOS */,
@@ -148,6 +152,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9C9B9442744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (iOS)" */;
 			buildPhases = (
+				C9C9B952274507AA007A0705 /* ShellScript */,
 				C9C9B9172744FE12007A0705 /* Sources */,
 				C9C9B9182744FE12007A0705 /* Frameworks */,
 				C9C9B9192744FE12007A0705 /* Resources */,
@@ -165,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9C9B9472744FE12007A0705 /* Build configuration list for PBXNativeTarget "MindLikeWater (macOS)" */;
 			buildPhases = (
+				C9C9B953274507F9007A0705 /* ShellScript */,
 				C9C9B91D2744FE12007A0705 /* Sources */,
 				C9C9B91E2744FE12007A0705 /* Frameworks */,
 				C9C9B91F2744FE12007A0705 /* Resources */,
@@ -223,6 +229,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
+				ORGANIZATIONNAME = MongoDB;
 				TargetAttributes = {
 					C9C9B91A2744FE12007A0705 = {
 						CreatedOnToolsVersion = 13.1;
@@ -293,6 +300,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9C9B952274507AA007A0705 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\nswift run --package-path Tools/ swiftlint\n";
+		};
+		C9C9B953274507F9007A0705 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swift run --package-path Tools/ swiftlint\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9C9B9172744FE12007A0705 /* Sources */ = {
