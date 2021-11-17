@@ -49,6 +49,8 @@
 		C9C9B9342744FE12007A0705 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C9B9382744FE12007A0705 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		C9C9B95027450090007A0705 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C9C9B95127450090007A0705 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,8 @@
 		C9C9B90E2744FE0F007A0705 = {
 			isa = PBXGroup;
 			children = (
+				C9C9B95027450090007A0705 /* LICENSE.txt */,
+				C9C9B95127450090007A0705 /* README.md */,
 				C9C9B9132744FE10007A0705 /* Shared */,
 				C9C9B9222744FE12007A0705 /* macOS */,
 				C9C9B92B2744FE12007A0705 /* Tests iOS */,
