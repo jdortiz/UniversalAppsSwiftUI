@@ -11,7 +11,9 @@ import SwiftUI
 struct MindLikeWaterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ActionsListView()
+            }
         }
     }
 }

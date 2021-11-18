@@ -13,8 +13,8 @@
 		C9C9B93B2744FE12007A0705 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B93A2744FE12007A0705 /* Tests_macOSLaunchTests.swift */; };
 		C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */; };
 		C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */; };
-		C9C9B93E2744FE12007A0705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ContentView.swift */; };
-		C9C9B93F2744FE12007A0705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ContentView.swift */; };
+		C9C9B93E2744FE12007A0705 /* ActionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ActionsListView.swift */; };
+		C9C9B93F2744FE12007A0705 /* ActionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B9152744FE10007A0705 /* ActionsListView.swift */; };
 		C9C9B9402744FE12007A0705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C9B9162744FE11007A0705 /* Assets.xcassets */; };
 		C9C9B9412744FE12007A0705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C9B9162744FE11007A0705 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindLikeWaterApp.swift; sourceTree = "<group>"; };
-		C9C9B9152744FE10007A0705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9C9B9152744FE10007A0705 /* ActionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsListView.swift; sourceTree = "<group>"; };
 		C9C9B9162744FE11007A0705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C9B91B2744FE12007A0705 /* MindLikeWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindLikeWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C9B9212744FE12007A0705 /* MindLikeWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindLikeWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C9B9142744FE10007A0705 /* MindLikeWaterApp.swift */,
-				C9C9B9152744FE10007A0705 /* ContentView.swift */,
+				C9C9B9152744FE10007A0705 /* ActionsListView.swift */,
 				C9C9B9162744FE11007A0705 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -344,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C9B93E2744FE12007A0705 /* ContentView.swift in Sources */,
+				C9C9B93E2744FE12007A0705 /* ActionsListView.swift in Sources */,
 				C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C9B93F2744FE12007A0705 /* ContentView.swift in Sources */,
+				C9C9B93F2744FE12007A0705 /* ActionsListView.swift in Sources */,
 				C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
