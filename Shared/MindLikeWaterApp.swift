@@ -12,6 +12,7 @@ struct MindLikeWaterApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
+                ProjectsListView()
                 ActionsListView()
             }
         }
