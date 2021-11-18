@@ -14,6 +14,7 @@ struct MindLikeWaterApp: App {
             NavigationView {
                 ProjectsListView()
                 ActionsListView()
+                ActionDetailView()
             }
         }
     }
