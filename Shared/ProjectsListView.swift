@@ -4,9 +4,11 @@ struct ProjectsListView: View {
     // MARK: - View
     var body: some View {
         List {
-            ForEach((1...10), id: \.self) {
-                Text("Projects \($0)")
-                    .padding()
+            ForEach((1...10), id: \.self) { projectId in
+                NavigationLink(destination: ActionsListView(projectId: projectId)) {
+                    Text("Project \(projectId)")
+                        .padding()
+                }
             }
         }
         .navigationTitle("Projects")
