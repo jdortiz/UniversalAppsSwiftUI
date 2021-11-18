@@ -13,9 +13,9 @@ struct MindLikeWaterApp: App {
         WindowGroup {
             NavigationView {
                 ProjectsListView()
-                ActionsListView()
-                ActionDetailView()
-                NoContentView()
+//                ActionsListView()
+//                ActionDetailView()
+//                NoContentView()
             }
         }
     }
