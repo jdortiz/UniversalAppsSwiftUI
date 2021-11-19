@@ -12,6 +12,8 @@ struct ProjectsListView: View {
             }
         }
         .navigationTitle("Projects")
+        .navigationBarItems(leading: Button(action: {}, label: { Label("Info", systemImage: "info.circle") }),
+                            trailing: Button(action: {}, label: { Label("Add", systemImage: "plus") }))
     }
 }
 
