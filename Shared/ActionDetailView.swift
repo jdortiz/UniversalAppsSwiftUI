@@ -12,6 +12,14 @@ struct ActionDetailView: View {
             Toggle("Done", isOn: .constant(false)).padding()
         }
         .navigationTitle("Action \(actionId ?? -1)")
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Button(action: {}, label: { Label("Share", systemImage: "square.and.arrow.up") })
+            }
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: {}, label: { Label("Add", systemImage: "plus") })
+            }
+        }
     }
 }
 

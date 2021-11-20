@@ -12,6 +12,14 @@ struct ActionsListView: View {
             }
         }
         .navigationTitle("Project \(projectId ?? -1)")
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Button(action: {}, label: { Label("Owner", systemImage: "person") })
+            }
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: {}, label: { Label("Add", systemImage: "plus") })
+            }
+        }
     }
 }
 
