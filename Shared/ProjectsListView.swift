@@ -13,10 +13,10 @@ struct ProjectsListView: View {
         }
         .navigationTitle("Projects")
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .automatic) {
                 Button(action: {}, label: { Label("Info", systemImage: "info.circle") })
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .primaryAction) {
                 Button(action: {}, label: { Label("Add", systemImage: "plus") })
             }
         }
