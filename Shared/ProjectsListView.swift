@@ -25,19 +25,17 @@ struct ProjectsListView: View {
                         Button("OK", role: .cancel) { }
                     }
             }
-            ToolbarItem(placement: .automatic) {
+            ToolbarItemGroup(placement: .bottomBar) {
                 Button(action: { showingAlert2 = true }, label: { Label("Info", systemImage: "info.circle") })
                     .alert("First automatic action", isPresented: $showingAlert2) {
                         Button("OK", role: .cancel) { }
                     }
-            }
-            ToolbarItem(placement: .automatic) {
+                Spacer()
                 Button(action: { showingAlert3 = true }, label: { Label("Info", systemImage: "info.circle") })
                     .alert("Second automatic action", isPresented: $showingAlert3) {
                         Button("OK", role: .cancel) { }
                     }
-            }
-            ToolbarItem(placement: .navigation) {
+                Spacer()
                 Button(action: { showingAlert4 = true }, label: { Label("Up", systemImage: "arrow.up") })
                     .alert("Project navigation action", isPresented: $showingAlert4) {
                         Button("OK", role: .cancel) { }
