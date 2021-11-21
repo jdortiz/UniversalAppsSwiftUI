@@ -11,11 +11,48 @@ import SwiftUI
 struct MindLikeWaterApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ProjectsListView()
-                NoContentView()
-                NoContentView()
-            }
+            #if os(macOS)
+            ThreeColumnsNavigationView()
+            #endif
+            #if os(iOS)
+            AdjustableView()
+            #endif
+        }
+        .commands {
+            SidebarCommands()
+        }
+    }
+}
+
+#if os(iOS)
+struct AdjustableView: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+
+    var body: some View {
+        if verticalSizeClass == .regular && horizontalSizeClass == .regular {
+            ThreeColumnsNavigationView()
+        } else {
+            SingleColumnNavigationView()
+        }
+    }
+}
+
+struct SingleColumnNavigationView: View {
+    var body: some View {
+        NavigationView {
+            ProjectsListView()
+        }
+    }
+}
+#endif
+
+struct ThreeColumnsNavigationView: View {
+    var body: some View {
+        NavigationView {
+            ProjectsListView()
+            NoContentView()
+            NoContentView()
         }
     }
 }

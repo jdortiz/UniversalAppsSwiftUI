@@ -6,6 +6,24 @@ struct ProjectsListView: View {
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
     @State private var showingAlert4 = false
+    private var button1: some View {
+        Button(action: { showingAlert2 = true }, label: { Label("Info", systemImage: "info.circle") })
+            .alert("First automatic action", isPresented: $showingAlert2) {
+                Button("OK", role: .cancel) { }
+            }
+    }
+    private var button2: some View {
+        Button(action: { showingAlert3 = true }, label: { Label("Info", systemImage: "info.circle") })
+            .alert("Second automatic action", isPresented: $showingAlert3) {
+                Button("OK", role: .cancel) { }
+            }
+    }
+    private var button3: some View {
+        Button(action: { showingAlert4 = true }, label: { Label("Up", systemImage: "arrow.up") })
+            .alert("Project navigation action", isPresented: $showingAlert4) {
+                Button("OK", role: .cancel) { }
+            }
+    }
 
     // MARK: - View
     var body: some View {
@@ -25,22 +43,26 @@ struct ProjectsListView: View {
                         Button("OK", role: .cancel) { }
                     }
             }
+            #if os(iOS)
             ToolbarItemGroup(placement: .bottomBar) {
-                Button(action: { showingAlert2 = true }, label: { Label("Info", systemImage: "info.circle") })
-                    .alert("First automatic action", isPresented: $showingAlert2) {
-                        Button("OK", role: .cancel) { }
-                    }
+                button1
                 Spacer()
-                Button(action: { showingAlert3 = true }, label: { Label("Info", systemImage: "info.circle") })
-                    .alert("Second automatic action", isPresented: $showingAlert3) {
-                        Button("OK", role: .cancel) { }
-                    }
+                button2
                 Spacer()
-                Button(action: { showingAlert4 = true }, label: { Label("Up", systemImage: "arrow.up") })
-                    .alert("Project navigation action", isPresented: $showingAlert4) {
-                        Button("OK", role: .cancel) { }
-                    }
+                button3
             }
+            #endif
+            #if os(macOS)
+            ToolbarItem(placement: .automatic) {
+                button1
+            }
+            ToolbarItem(placement: .automatic) {
+                button2
+            }
+            ToolbarItem(placement: .navigation) {
+                button3
+            }
+            #endif
         }
     }
 }
