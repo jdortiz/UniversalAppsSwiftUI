@@ -13,12 +13,27 @@ struct MindLikeWaterApp: App {
         WindowGroup {
             #if os(macOS)
             ThreeColumnsNavigationView()
-            #else
-            SingleColumnNavigationView()
+            #endif
+            #if os(iOS)
+            AdjustableView()
             #endif
         }
         .commands {
             SidebarCommands()
+        }
+    }
+}
+
+#if os(iOS)
+struct AdjustableView: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+
+    var body: some View {
+        if verticalSizeClass == .regular && horizontalSizeClass == .regular {
+            ThreeColumnsNavigationView()
+        } else {
+            SingleColumnNavigationView()
         }
     }
 }
@@ -30,6 +45,7 @@ struct SingleColumnNavigationView: View {
         }
     }
 }
+#endif
 
 struct ThreeColumnsNavigationView: View {
     var body: some View {
