@@ -37,9 +37,9 @@ struct ActionsListView: View {
                         Button("OK", role: .cancel) { }
                     }
             }
-            ToolbarItem(placement: .automatic) {
-                Button(action: { showingAlert4 = true }, label: { Label("Owner", systemImage: "person") })
-                    .alert("Third automatic action", isPresented: $showingAlert4) {
+            ToolbarItem(placement: .navigation) {
+                Button(action: { showingAlert4 = true }, label: { Label("Up", systemImage: "arrow.up") })
+                    .alert("Action navigation action", isPresented: $showingAlert4) {
                         Button("OK", role: .cancel) { }
                     }
             }
