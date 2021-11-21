@@ -1,6 +1,12 @@
 import SwiftUI
 
 struct ProjectsListView: View {
+    // MARK: - Properties
+    @State private var showingAlert1 = false
+    @State private var showingAlert2 = false
+    @State private var showingAlert3 = false
+    @State private var showingAlert4 = false
+
     // MARK: - View
     var body: some View {
         List {
@@ -13,11 +19,29 @@ struct ProjectsListView: View {
         }
         .navigationTitle("Projects")
         .toolbar {
-            ToolbarItem(placement: .automatic) {
-                Button(action: {}, label: { Label("Info", systemImage: "info.circle") })
-            }
             ToolbarItem(placement: .primaryAction) {
-                Button(action: {}, label: { Label("Add", systemImage: "plus") })
+                Button(action: { showingAlert1 = true }, label: { Label("Add", systemImage: "plus") })
+                    .alert("Primary action", isPresented: $showingAlert1) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert2 = true }, label: { Label("Info", systemImage: "info.circle") })
+                    .alert("First automatic action", isPresented: $showingAlert2) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert3 = true }, label: { Label("Info", systemImage: "info.circle") })
+                    .alert("Second automatic action", isPresented: $showingAlert3) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert4 = true }, label: { Label("Info", systemImage: "info.circle") })
+                    .alert("Third automatic action", isPresented: $showingAlert4) {
+                        Button("OK", role: .cancel) { }
+                    }
             }
         }
     }

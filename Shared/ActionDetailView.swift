@@ -3,6 +3,10 @@ import SwiftUI
 struct ActionDetailView: View {
     // MARK: - Properties
     let actionId: Int?
+    @State private var showingAlert1 = false
+    @State private var showingAlert2 = false
+    @State private var showingAlert3 = false
+    @State private var showingAlert4 = false
 
     // MARK: - View
     var body: some View {
@@ -13,11 +17,29 @@ struct ActionDetailView: View {
         }
         .navigationTitle("Action \(actionId ?? -1)")
         .toolbar {
-            ToolbarItem(placement: .automatic) {
-                Button(action: {}, label: { Label("Share", systemImage: "square.and.arrow.up") })
-            }
             ToolbarItem(placement: .primaryAction) {
-                Button(action: {}, label: { Label("Add", systemImage: "plus") })
+                Button(action: { showingAlert1 = true }, label: { Label("Add", systemImage: "plus") })
+                    .alert("Primary action", isPresented: $showingAlert1) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert2 = true }, label: { Label("Share", systemImage: "square.and.arrow.up") })
+                    .alert("First automatic action", isPresented: $showingAlert2) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert3 = true }, label: { Label("Share", systemImage: "square.and.arrow.up") })
+                    .alert("Second automatic action", isPresented: $showingAlert3) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button(action: { showingAlert4 = true }, label: { Label("Share", systemImage: "square.and.arrow.up") })
+                    .alert("Third automatic action", isPresented: $showingAlert4) {
+                        Button("OK", role: .cancel) { }
+                    }
             }
         }
     }
