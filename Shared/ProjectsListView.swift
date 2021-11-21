@@ -42,7 +42,8 @@ struct ProjectsListView: View {
                         Button("OK", role: .cancel) { }
                     }
             }
-            #else
+            #endif
+            #if os(macOS)
             ToolbarItem(placement: .automatic) {
                 Button(action: { showingAlert2 = true }, label: { Label("Info", systemImage: "info.circle") })
                     .alert("First automatic action", isPresented: $showingAlert2) {
