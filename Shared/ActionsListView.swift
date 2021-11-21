@@ -3,7 +3,7 @@ import SwiftUI
 struct ActionsListView: View {
     // MARK: - Properties
     let projectId: Int?
-    @State private var showingAlert1 = false
+    @State private var showingActionEdit = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
     @State private var showingAlert4 = false
@@ -20,10 +20,7 @@ struct ActionsListView: View {
         .navigationTitle("Project \(projectId ?? -1)")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button(action: { showingAlert1 = true }, label: { Label("Add", systemImage: "plus") })
-                    .alert("Primary action", isPresented: $showingAlert1) {
-                        Button("OK", role: .cancel) { }
-                    }
+                Button(action: { showingActionEdit = true }, label: { Label("Add", systemImage: "plus") })
             }
             ToolbarItem(placement: .automatic) {
                 Button(action: { showingAlert2 = true }, label: { Label("Owner", systemImage: "person") })
@@ -43,6 +40,9 @@ struct ActionsListView: View {
                         Button("OK", role: .cancel) { }
                     }
             }
+        }
+        .sheet(isPresented: $showingActionEdit) {
+            ActionEditView(showView: $showingActionEdit)
         }
     }
 }
