@@ -2,13 +2,13 @@ import SwiftUI
 
 struct ActionEditView: View {
     // MARK: - View
+    @ObservedObject var viewModel: ActionEditViewModel
     @Binding var showView: Bool
-    @State private var name: String = ""
 
     // MARK: - View
     var body: some View {
         NavigationView {
-            TextField("Action name", text: $name)
+            TextField("Action name", text: $viewModel.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
                 .navigationTitle("New action")
@@ -21,10 +21,13 @@ struct ActionEditView: View {
                         .keyboardShortcut(.cancelAction)
                     }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button(action: { showView = false },
+                        Button(action: {
+                            viewModel.save()
+                            showView = false
+                        },
                                label: { Text("Save")
                                 .bold()
-                                .disabled(name.isEmpty)
+                                .disabled(viewModel.saveDisabled)
                         })
                             .keyboardShortcut(.defaultAction)
                     }
@@ -33,8 +36,8 @@ struct ActionEditView: View {
     }
 }
 
-struct ActionEditViewPreviews: PreviewProvider {
-    static var previews: some View {
-        ActionEditView(showView: .constant(true))
-    }
-}
+// struct ActionEditViewPreviews: PreviewProvider {
+//    static var previews: some View {
+//        ActionEditView(showView: .constant(true))
+//    }
+// }

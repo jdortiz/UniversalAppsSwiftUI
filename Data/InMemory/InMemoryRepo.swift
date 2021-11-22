@@ -54,4 +54,11 @@ class InMemoryRepo: MLWRepo {
             }
         }
     }
+
+    func create(projectId: UUID, action: Action) {
+        if let projectIndex = projects.firstIndex(where: { $0.id == projectId }) {
+            projects[projectIndex].actions.append(action.id)
+            actions.append(action)
+        }
+    }
 }

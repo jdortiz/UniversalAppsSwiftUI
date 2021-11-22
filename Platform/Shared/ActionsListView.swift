@@ -4,6 +4,7 @@ import Combine
 struct ActionsListView: View {
     // MARK: - Properties
     @ObservedObject var viewModel: ActionsListViewModel
+    let projectId: UUID
     @State private var showingActionEdit = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
@@ -42,7 +43,8 @@ struct ActionsListView: View {
             }
         }
         .sheet(isPresented: $showingActionEdit) {
-            ActionEditView(showView: $showingActionEdit)
+            ActionEditView(viewModel: ActionEditViewModel(repo: InMemoryRepo.shared, projectId: projectId),
+                           showView: $showingActionEdit)
         }
         .onAppear {
             viewModel.refresh()

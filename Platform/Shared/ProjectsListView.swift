@@ -31,7 +31,8 @@ struct ProjectsListView: View {
     var body: some View {
         List(viewModel.projects) { project in
             NavigationLink(destination: ActionsListView(viewModel: ActionsListViewModel(repo: InMemoryRepo.shared,
-                                                                                        projectId: project.id))) {
+                                                                                        projectId: project.id),
+                                                        projectId: project.id)) {
                 Text(project.name)
                     .padding()
             }
