@@ -44,4 +44,14 @@ class InMemoryRepo: MLWRepo {
             completion(action)
         }
     }
+
+    func update(action: Action) {
+        actions = actions.map {
+            if $0.id == action.id {
+                return action
+            } else {
+                return $0
+            }
+        }
+    }
 }

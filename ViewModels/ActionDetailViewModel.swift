@@ -16,4 +16,8 @@ class ActionDetailViewModel: ObservableObject {
             self.action = action
         }
     }
+
+    func update() {
+        repo.update(action: action)
+    }
 }

@@ -15,7 +15,11 @@ struct ActionDetailView: View {
         VStack(alignment: .leading) {
             Text(viewModel.action.name)
                 .padding()
-            Toggle("Done", isOn: $viewModel.action.status).padding()
+            Toggle("Done", isOn: $viewModel.action.status)
+                .onChange(of: viewModel.action.status, perform: { _ in
+                    viewModel.update()
+                })
+                .padding()
         }
         .navigationTitle("Action \(viewModel.action.id)")
         .toolbar {
