@@ -33,6 +33,10 @@
 		C9D337EC274B129800F3858A /* ActionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */; };
 		C9D337ED274B129B00F3858A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E4274B0A9300F3858A /* Action.swift */; };
 		C9D337EE274B129E00F3858A /* MLWRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E6274B0E4500F3858A /* MLWRepo.swift */; };
+		C9D337F0274B872200F3858A /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */; };
+		C9D337F1274B872200F3858A /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */; };
+		C9D337F3274B880100F3858A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F2274B880100F3858A /* Project.swift */; };
+		C9D337F4274B880100F3858A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F2274B880100F3858A /* Project.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,8 @@
 		C9D337E4274B0A9300F3858A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		C9D337E6274B0E4500F3858A /* MLWRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLWRepo.swift; sourceTree = "<group>"; };
 		C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepo.swift; sourceTree = "<group>"; };
+		C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
+		C9D337F2274B880100F3858A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +203,9 @@
 		C9D337DF274B084400F3858A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C9D337E4274B0A9300F3858A /* Action.swift */,
 				C9D337E6274B0E4500F3858A /* MLWRepo.swift */,
+				C9D337E4274B0A9300F3858A /* Action.swift */,
+				C9D337F2274B880100F3858A /* Project.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 		C9D337E0274B085900F3858A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */,
 				C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -427,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D337D9274AAD4F00F3858A /* ActionEditView.swift in Sources */,
+				C9D337F0274B872200F3858A /* ProjectsListViewModel.swift in Sources */,
 				C9C9B93E2744FE12007A0705 /* ActionsListView.swift in Sources */,
 				C9D337E3274B09E600F3858A /* ActionsListViewModel.swift in Sources */,
 				C9D337EA274B0F7600F3858A /* InMemoryRepo.swift in Sources */,
@@ -436,6 +445,7 @@
 				C9D337E7274B0E4500F3858A /* MLWRepo.swift in Sources */,
 				C9C9B955274647D0007A0705 /* ProjectsListView.swift in Sources */,
 				C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+				C9D337F3274B880100F3858A /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D337EB274B0F7600F3858A /* InMemoryRepo.swift in Sources */,
+				C9D337F1274B872200F3858A /* ProjectsListViewModel.swift in Sources */,
 				C9D337ED274B129B00F3858A /* Action.swift in Sources */,
 				C9D337DD274AC1DD00F3858A /* ActionEditView.swift in Sources */,
 				C9C9B93F2744FE12007A0705 /* ActionsListView.swift in Sources */,
@@ -453,6 +464,7 @@
 				C9D337EC274B129800F3858A /* ActionsListViewModel.swift in Sources */,
 				C9D337EE274B129E00F3858A /* MLWRepo.swift in Sources */,
 				C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+				C9D337F4274B880100F3858A /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

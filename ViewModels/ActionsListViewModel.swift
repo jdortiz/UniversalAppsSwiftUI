@@ -4,13 +4,15 @@ import Combine
 class ActionsListViewModel: ObservableObject {
     @Published var actions: [Action] = []
     private let repo: MLWRepo
+    private let projectId: UUID
 
-    init(repo: MLWRepo) {
+    init(repo: MLWRepo, projectId: UUID) {
         self.repo = repo
+        self.projectId = projectId
     }
 
     func refresh() {
-        repo.actions(projectId: UUID()) { actions in
+        repo.fetchActions(projectId: projectId) { actions in
             self.actions = actions
         }
     }

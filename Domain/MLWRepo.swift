@@ -1,5 +1,6 @@
 import Foundation
 
 protocol MLWRepo {
-    func actions(projectId: UUID, completion: ([Action]) -> Void)
+    func fetchProjects(completion: ([Project]) -> Void)
+    func fetchActions(projectId: UUID, completion: ([Action]) -> Void)
 }

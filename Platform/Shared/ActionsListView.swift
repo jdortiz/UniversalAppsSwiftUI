@@ -4,7 +4,6 @@ import Combine
 struct ActionsListView: View {
     // MARK: - Properties
     @ObservedObject var viewModel: ActionsListViewModel
-    let projectId: Int?
     @State private var showingActionEdit = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
@@ -17,7 +16,7 @@ struct ActionsListView: View {
                     .padding()
             }
         }
-        .navigationTitle("Project \(projectId ?? -1)")
+        .navigationTitle("Project")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: { showingActionEdit = true }, label: { Label("Add", systemImage: "plus") })
