@@ -4,6 +4,7 @@ class InMemoryRepo: MLWRepo {
     private var actions: [Action]
     private var projects: [Project]
     static let shared = InMemoryRepo()
+    private var observersAdded: Set<AnyHashable> = []
 
     private init() {
         let actionWS0 = UUID()
@@ -53,12 +54,26 @@ class InMemoryRepo: MLWRepo {
                 return $0
             }
         }
+        notify()
     }
 
     func create(projectId: UUID, action: Action) {
         if let projectIndex = projects.firstIndex(where: { $0.id == projectId }) {
             projects[projectIndex].actions.append(action.id)
             actions.append(action)
+            notify()
         }
+    }
+
+    private var observers: [MLWRepoObserver] {
+        observersAdded.compactMap { $0 as? MLWRepoObserver }
+    }
+
+    func add<O>(observer: O) where O: MLWRepoObserver, O: Hashable {
+        _ = observersAdded.insert(observer)
+    }
+
+    private func notify() {
+        observers.forEach { $0.actionsChanged() }
     }
 }
