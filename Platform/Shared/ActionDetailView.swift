@@ -1,8 +1,9 @@
 import SwiftUI
+import Foundation
 
 struct ActionDetailView: View {
     // MARK: - Properties
-    let actionId: Int?
+    let actionId: UUID?
     @State private var showingAlert1 = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
@@ -15,7 +16,7 @@ struct ActionDetailView: View {
                 .padding()
             Toggle("Done", isOn: .constant(false)).padding()
         }
-        .navigationTitle("Action \(actionId ?? -1)")
+        .navigationTitle("Action \(actionId ?? UUID())")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: { showingAlert1 = true }, label: { Label("Add", systemImage: "plus") })
@@ -47,6 +48,6 @@ struct ActionDetailView: View {
 
 struct ActionDetailViewPreviews: PreviewProvider {
     static var previews: some View {
-        ActionDetailView(actionId: -1)
+        ActionDetailView(actionId: UUID())
     }
 }

@@ -1,7 +1,9 @@
 import SwiftUI
+import Combine
 
 struct ActionsListView: View {
     // MARK: - Properties
+    @ObservedObject var viewModel: ActionsListViewModel
     let projectId: Int?
     @State private var showingActionEdit = false
     @State private var showingAlert2 = false
@@ -9,12 +11,10 @@ struct ActionsListView: View {
     @State private var showingAlert4 = false
 
     var body: some View {
-        List {
-            ForEach((1...10), id: \.self) { actionId in
-                NavigationLink(destination: ActionDetailView(actionId: actionId)) {
-                    Text("Action \(actionId)")
-                        .padding()
-                }
+        List(viewModel.actions) { action in
+            NavigationLink(destination: ActionDetailView(actionId: action.id)) {
+                Text(action.name)
+                    .padding()
             }
         }
         .navigationTitle("Project \(projectId ?? -1)")
@@ -44,13 +44,16 @@ struct ActionsListView: View {
         .sheet(isPresented: $showingActionEdit) {
             ActionEditView(showView: $showingActionEdit)
         }
-    }
-}
-
-struct ActionsListViewPreviews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ActionsListView(projectId: nil)
+        .onAppear {
+            viewModel.refresh()
         }
     }
 }
+
+// struct ActionsListViewPreviews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            ActionsListView(projectId: nil)
+//        }
+//    }
+// }

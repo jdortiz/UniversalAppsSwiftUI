@@ -25,6 +25,14 @@
 		C9C9B96227465F89007A0705 /* NoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9B96027465F88007A0705 /* NoContentView.swift */; };
 		C9D337D9274AAD4F00F3858A /* ActionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337D8274AAD4F00F3858A /* ActionEditView.swift */; };
 		C9D337DD274AC1DD00F3858A /* ActionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337DC274AC16900F3858A /* ActionEditView.swift */; };
+		C9D337E3274B09E600F3858A /* ActionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */; };
+		C9D337E5274B0A9300F3858A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E4274B0A9300F3858A /* Action.swift */; };
+		C9D337E7274B0E4500F3858A /* MLWRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E6274B0E4500F3858A /* MLWRepo.swift */; };
+		C9D337EA274B0F7600F3858A /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */; };
+		C9D337EB274B0F7600F3858A /* InMemoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */; };
+		C9D337EC274B129800F3858A /* ActionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */; };
+		C9D337ED274B129B00F3858A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E4274B0A9300F3858A /* Action.swift */; };
+		C9D337EE274B129E00F3858A /* MLWRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337E6274B0E4500F3858A /* MLWRepo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,10 @@
 		C9C9B96027465F88007A0705 /* NoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContentView.swift; sourceTree = "<group>"; };
 		C9D337D8274AAD4F00F3858A /* ActionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEditView.swift; sourceTree = "<group>"; };
 		C9D337DC274AC16900F3858A /* ActionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEditView.swift; sourceTree = "<group>"; };
+		C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsListViewModel.swift; sourceTree = "<group>"; };
+		C9D337E4274B0A9300F3858A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		C9D337E6274B0E4500F3858A /* MLWRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLWRepo.swift; sourceTree = "<group>"; };
+		C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +113,12 @@
 		C9C9B90E2744FE0F007A0705 = {
 			isa = PBXGroup;
 			children = (
+				C9D337DE274B072D00F3858A /* Platform */,
+				C9D337E0274B085900F3858A /* ViewModels */,
+				C9D337DF274B084400F3858A /* Domain */,
+				C9D337E1274B093A00F3858A /* Data */,
 				C9C9B95027450090007A0705 /* LICENSE.txt */,
 				C9C9B95127450090007A0705 /* README.md */,
-				C9C9B9132744FE10007A0705 /* Shared */,
-				C9D337DB274AC0E300F3858A /* iOS */,
-				C9C9B9222744FE12007A0705 /* macOS */,
 				C9C9B92B2744FE12007A0705 /* Tests iOS */,
 				C9C9B9372744FE12007A0705 /* Tests macOS */,
 				C9C9B91C2744FE12007A0705 /* Products */,
@@ -169,6 +182,49 @@
 				C9D337D8274AAD4F00F3858A /* ActionEditView.swift */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		C9D337DE274B072D00F3858A /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				C9D337DB274AC0E300F3858A /* iOS */,
+				C9C9B9222744FE12007A0705 /* macOS */,
+				C9C9B9132744FE10007A0705 /* Shared */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		C9D337DF274B084400F3858A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C9D337E4274B0A9300F3858A /* Action.swift */,
+				C9D337E6274B0E4500F3858A /* MLWRepo.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C9D337E0274B085900F3858A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C9D337E1274B093A00F3858A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C9D337E8274B0F5200F3858A /* InMemory */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C9D337E8274B0F5200F3858A /* InMemory */ = {
+			isa = PBXGroup;
+			children = (
+				C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */,
+			);
+			path = InMemory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,8 +428,12 @@
 			files = (
 				C9D337D9274AAD4F00F3858A /* ActionEditView.swift in Sources */,
 				C9C9B93E2744FE12007A0705 /* ActionsListView.swift in Sources */,
+				C9D337E3274B09E600F3858A /* ActionsListViewModel.swift in Sources */,
+				C9D337EA274B0F7600F3858A /* InMemoryRepo.swift in Sources */,
 				C9C9B96127465F88007A0705 /* NoContentView.swift in Sources */,
 				C9C9B95E27465ED7007A0705 /* ActionDetailView.swift in Sources */,
+				C9D337E5274B0A9300F3858A /* Action.swift in Sources */,
+				C9D337E7274B0E4500F3858A /* MLWRepo.swift in Sources */,
 				C9C9B955274647D0007A0705 /* ProjectsListView.swift in Sources */,
 				C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
 			);
@@ -383,11 +443,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D337EB274B0F7600F3858A /* InMemoryRepo.swift in Sources */,
+				C9D337ED274B129B00F3858A /* Action.swift in Sources */,
 				C9D337DD274AC1DD00F3858A /* ActionEditView.swift in Sources */,
 				C9C9B93F2744FE12007A0705 /* ActionsListView.swift in Sources */,
 				C9C9B96227465F89007A0705 /* NoContentView.swift in Sources */,
 				C9C9B95F27465ED7007A0705 /* ActionDetailView.swift in Sources */,
 				C9C9B956274647D1007A0705 /* ProjectsListView.swift in Sources */,
+				C9D337EC274B129800F3858A /* ActionsListViewModel.swift in Sources */,
+				C9D337EE274B129E00F3858A /* MLWRepo.swift in Sources */,
 				C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,7 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Platform/macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -631,7 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Platform/macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
