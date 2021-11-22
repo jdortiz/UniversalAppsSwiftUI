@@ -1,9 +1,10 @@
 import SwiftUI
 import Foundation
+import Combine
 
 struct ActionDetailView: View {
     // MARK: - Properties
-    let actionId: UUID?
+    @ObservedObject var viewModel: ActionDetailViewModel
     @State private var showingAlert1 = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
@@ -12,11 +13,11 @@ struct ActionDetailView: View {
     // MARK: - View
     var body: some View {
         VStack(alignment: .leading) {
-            Text("This is something that should be done")
+            Text(viewModel.action.name)
                 .padding()
-            Toggle("Done", isOn: .constant(false)).padding()
+            Toggle("Done", isOn: $viewModel.action.status).padding()
         }
-        .navigationTitle("Action \(actionId ?? UUID())")
+        .navigationTitle("Action \(viewModel.action.id)")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: { showingAlert1 = true }, label: { Label("Add", systemImage: "plus") })
@@ -46,8 +47,8 @@ struct ActionDetailView: View {
     }
 }
 
-struct ActionDetailViewPreviews: PreviewProvider {
-    static var previews: some View {
-        ActionDetailView(actionId: UUID())
-    }
-}
+// struct ActionDetailViewPreviews: PreviewProvider {
+//    static var previews: some View {
+//        ActionDetailView(actionId: UUID())
+//    }
+// }

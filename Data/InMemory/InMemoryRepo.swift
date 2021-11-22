@@ -38,4 +38,10 @@ class InMemoryRepo: MLWRepo {
             completion(projectActions)
         }
     }
+
+    func getAction(actionId: UUID, completion: (Action) -> Void) {
+        if let action = actions.first(where: { $0.id == actionId }) {
+            completion(action)
+        }
+    }
 }

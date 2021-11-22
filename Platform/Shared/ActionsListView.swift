@@ -11,7 +11,8 @@ struct ActionsListView: View {
 
     var body: some View {
         List(viewModel.actions) { action in
-            NavigationLink(destination: ActionDetailView(actionId: action.id)) {
+            NavigationLink(destination: ActionDetailView(viewModel: ActionDetailViewModel(repo: InMemoryRepo.shared,
+                                                                                          actionId: action.id))) {
                 Text(action.name)
                     .padding()
             }

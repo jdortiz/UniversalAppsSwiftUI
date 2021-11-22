@@ -37,6 +37,8 @@
 		C9D337F1274B872200F3858A /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */; };
 		C9D337F3274B880100F3858A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F2274B880100F3858A /* Project.swift */; };
 		C9D337F4274B880100F3858A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F2274B880100F3858A /* Project.swift */; };
+		C9D337F6274BA43700F3858A /* ActionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F5274BA43700F3858A /* ActionDetailViewModel.swift */; };
+		C9D337F7274BA43700F3858A /* ActionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D337F5274BA43700F3858A /* ActionDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		C9D337E9274B0F7600F3858A /* InMemoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepo.swift; sourceTree = "<group>"; };
 		C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
 		C9D337F2274B880100F3858A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		C9D337F5274BA43700F3858A /* ActionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,7 @@
 			children = (
 				C9D337EF274B872100F3858A /* ProjectsListViewModel.swift */,
 				C9D337E2274B09E600F3858A /* ActionsListViewModel.swift */,
+				C9D337F5274BA43700F3858A /* ActionDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -445,6 +449,7 @@
 				C9D337E7274B0E4500F3858A /* MLWRepo.swift in Sources */,
 				C9C9B955274647D0007A0705 /* ProjectsListView.swift in Sources */,
 				C9C9B93C2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+				C9D337F6274BA43700F3858A /* ActionDetailViewModel.swift in Sources */,
 				C9D337F3274B880100F3858A /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +469,7 @@
 				C9D337EC274B129800F3858A /* ActionsListViewModel.swift in Sources */,
 				C9D337EE274B129E00F3858A /* MLWRepo.swift in Sources */,
 				C9C9B93D2744FE12007A0705 /* MindLikeWaterApp.swift in Sources */,
+				C9D337F7274BA43700F3858A /* ActionDetailViewModel.swift in Sources */,
 				C9D337F4274B880100F3858A /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
