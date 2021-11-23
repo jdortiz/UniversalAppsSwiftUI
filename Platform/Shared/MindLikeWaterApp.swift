@@ -41,7 +41,7 @@ struct AdjustableView: View {
 struct SingleColumnNavigationView: View {
     var body: some View {
         NavigationView {
-            ProjectsListView()
+            ProjectsListView(viewModel: ProjectsListViewModel(repo: InMemoryRepo.shared))
         }
     }
 }
@@ -50,7 +50,7 @@ struct SingleColumnNavigationView: View {
 struct ThreeColumnsNavigationView: View {
     var body: some View {
         NavigationView {
-            ProjectsListView()
+            ProjectsListView(viewModel: ProjectsListViewModel(repo: InMemoryRepo.shared))
             NoContentView()
             NoContentView()
         }

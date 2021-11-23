@@ -1,23 +1,24 @@
 import SwiftUI
+import Combine
 
 struct ActionsListView: View {
     // MARK: - Properties
-    let projectId: Int?
+    @ObservedObject var viewModel: ActionsListViewModel
+    let projectId: UUID
     @State private var showingActionEdit = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
     @State private var showingAlert4 = false
 
     var body: some View {
-        List {
-            ForEach((1...10), id: \.self) { actionId in
-                NavigationLink(destination: ActionDetailView(actionId: actionId)) {
-                    Text("Action \(actionId)")
-                        .padding()
-                }
+        List(viewModel.actions) { action in
+            NavigationLink(destination: ActionDetailView(viewModel: ActionDetailViewModel(repo: InMemoryRepo.shared,
+                                                                                          actionId: action.id))) {
+                Text(action.name)
+                    .padding()
             }
         }
-        .navigationTitle("Project \(projectId ?? -1)")
+        .navigationTitle("Project")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: { showingActionEdit = true }, label: { Label("Add", systemImage: "plus") })
@@ -42,15 +43,19 @@ struct ActionsListView: View {
             }
         }
         .sheet(isPresented: $showingActionEdit) {
-            ActionEditView(showView: $showingActionEdit)
+            ActionEditView(viewModel: ActionEditViewModel(repo: InMemoryRepo.shared, projectId: projectId),
+                           showView: $showingActionEdit)
+        }
+        .onAppear {
+            viewModel.refresh()
         }
     }
 }
 
-struct ActionsListViewPreviews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ActionsListView(projectId: nil)
-        }
-    }
-}
+// struct ActionsListViewPreviews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            ActionsListView(projectId: nil)
+//        }
+//    }
+// }

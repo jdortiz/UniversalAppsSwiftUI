@@ -1,7 +1,9 @@
 import SwiftUI
+import Combine
 
 struct ProjectsListView: View {
     // MARK: - Properties
+    @ObservedObject var viewModel: ProjectsListViewModel
     @State private var showingAlert1 = false
     @State private var showingAlert2 = false
     @State private var showingAlert3 = false
@@ -27,12 +29,12 @@ struct ProjectsListView: View {
 
     // MARK: - View
     var body: some View {
-        List {
-            ForEach((1...10), id: \.self) { projectId in
-                NavigationLink(destination: ActionsListView(projectId: projectId)) {
-                    Text("Project \(projectId)")
-                        .padding()
-                }
+        List(viewModel.projects) { project in
+            NavigationLink(destination: ActionsListView(viewModel: ActionsListViewModel(repo: InMemoryRepo.shared,
+                                                                                        projectId: project.id),
+                                                        projectId: project.id)) {
+                Text(project.name)
+                    .padding()
             }
         }
         .navigationTitle("Projects")
@@ -64,13 +66,16 @@ struct ProjectsListView: View {
             }
             #endif
         }
-    }
-}
-
-struct ProjectsListViewPreviews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ProjectsListView()
+        .onAppear {
+            viewModel.refresh()
         }
     }
 }
+
+// struct ProjectsListViewPreviews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            ProjectsListView()
+//        }
+//    }
+// }
